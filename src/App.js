@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "./styles/App.css";
+import Home from "./pages/Home";
+import NavBar from "./components/NavBar";
+import { useEffect, useState } from "react";
+import Cursor from "./components/Cursor";
+import Sidebar from "./components/Sidebar";
 
 function App() {
+  const [styleWeb, setStyleWeb] = useState("dark-mode");
+
+  const [enableTrail, setEnableTrail] = useState(false);
+
+  const toggleTrail = () => {
+    setEnableTrail(!enableTrail);
+  };
+
+  useEffect(() => {
+    document.body.className = styleWeb;
+  }, [styleWeb]);
+
+  const toggleTheme = () => {
+    setStyleWeb((prevTheme) => (prevTheme === "light-mode" ? "dark-mode" : "light-mode"));
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Cursor enableTrail={enableTrail} />
+      <Router>
+        <Sidebar/>
+        <NavBar toggleTheme={toggleTheme} styleWeb={styleWeb} />
+        <Routes>
+          <Route path="/home" element={<Home styleWeb={styleWeb} />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
