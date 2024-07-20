@@ -1,24 +1,16 @@
-import React from "react";
+import React, { FC } from "react";
 import "../styles/pages/Home.css";
 import imgMeDark from "../assets/images/me_dark_up.png";
 import imgMeLight from "../assets/images/me_light_pixar.png";
-import Spline from "@splinetool/react-spline";
-import JSLogo from "../util/three_js/JSLogo";
-import { FaArrowRight, FaFileDownload, FaVideo } from "react-icons/fa";
-import { GiSkills } from "react-icons/gi";
+import { FaFileDownload, FaVideo } from "react-icons/fa";
 import { PiCertificate } from "react-icons/pi";
 import { LuBrainCircuit } from "react-icons/lu";
 
-const Home = ({ styleWeb }) => {
-  function calculateExperienceInMonths(startDate) {
-    const today = new Date();
-    const start = new Date(startDate);
+interface HomeProps {
+  styleWeb: "light-mode" | "dark-mode";
+}
 
-    const yearsDifference = today.getFullYear() - start.getFullYear();
-    const monthsDifference = today.getMonth() - start.getMonth();
-
-    return yearsDifference * 12 + monthsDifference;
-  }
+export const Home: FC<HomeProps> = ({ styleWeb }) => {
 
   return (
     <div className="home">
@@ -34,15 +26,15 @@ const Home = ({ styleWeb }) => {
           </span>
           <div className="btn-actions-home">
             <button>
-              <a href="#" class="btn2">
-                <span class="spn2">
-                  DOWLOAD MY CV ! <FaFileDownload />
+              <a href="#" className="btn2">
+                <span className="spn2">
+                  DOWNLOAD MY CV ! <FaFileDownload />
                 </span>
               </a>
             </button>
             <button>
-              <a href="#" class="btn2">
-                <span class="spn2">
+              <a href="#" className="btn2">
+                <span className="spn2">
                   See a video about me here <FaVideo />
                 </span>
               </a>
@@ -52,8 +44,8 @@ const Home = ({ styleWeb }) => {
       </div>
       <div className="img-home">
         <img
-          src={styleWeb == "dark-mode" ? imgMeDark : imgMeLight}
-          alt="me-dark"
+          src={styleWeb === "dark-mode" ? imgMeDark : imgMeLight}
+          alt="me"
         />
         <div className="info-boxes">
           <div className="box slide-in-bck-right">
@@ -72,7 +64,7 @@ const Home = ({ styleWeb }) => {
                   for the role, demonstrating expertise and proficiency.
                 </p>
                 <button className="animated-button btn-style-1">View skills</button>
-                </div>
+              </div>
             </div>
           </div>
           <div className="box slide-in-bck-right">
@@ -87,16 +79,14 @@ const Home = ({ styleWeb }) => {
                   commitment to professional growth and industry standards.
                 </p>
                 <button className="animated-button btn-style-2">See certifications</button>
-                </div>
+              </div>
             </div>
           </div>
-          <button class="mouse">
-            <div class="scroll"></div>
+          <button className="mouse">
+            <div className="scroll"></div>
           </button>
         </div>
       </div>
     </div>
   );
 };
-
-export default Home;

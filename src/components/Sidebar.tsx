@@ -3,8 +3,10 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { CSSTransition } from "react-transition-group";
 import "../styles/components/Sidebar.css";
 
-const Sidebar = () => {
-  const [navigateVisibility, setNavigateVisibility] = useState(false);
+interface SidebarProps {}
+
+const Sidebar: React.FC<SidebarProps> = () => {
+  const [navigateVisibility, setNavigateVisibility] = useState<boolean>(false);
 
   return (
     <div className="line-button">

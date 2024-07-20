@@ -242,7 +242,6 @@ body.dark-mode .icon {
     animation-duration: 6s;
 }
 
-/* Animations */
 @keyframes moveBody {
     0% {
         transform: translateY(0);

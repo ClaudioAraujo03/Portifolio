@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import "../styles/components/NavBar.css";
 import { MdHome, MdPerson, MdWork, MdContacts } from "react-icons/md";
 import { AiOutlineFileText } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 
-const NavBar = ({ toggleTheme, styleWeb }) => {
-  const [sectionSelected, setSectionSelected] = useState("home");
-  const location = useLocation("/");
+interface NavBarProps {
+  toggleTheme: () => void;
+  styleWeb: "light-mode" | "dark-mode";
+}
+
+export const NavBar: FC<NavBarProps> = ({ toggleTheme, styleWeb }) => {
+  const [sectionSelected, setSectionSelected] = useState<string>("home");
+  const location = useLocation();
 
   return (
     <div>
@@ -89,5 +94,3 @@ const NavBar = ({ toggleTheme, styleWeb }) => {
     </div>
   );
 };
-
-export default NavBar;

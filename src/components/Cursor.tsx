@@ -1,21 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FC } from "react";
 import "../styles/components/Cursor.css";
 
-const Cursor = ({ enableTrail }) => {
+interface CursorProps {
+  enableTrail: boolean;
+}
+
+interface Particle {
+  id: number;
+  left: number;
+  top: number;
+}
+
+export const Cursor: FC<CursorProps> = ({ enableTrail }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  const [particles, setParticles] = useState([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
   const [isExploding, setIsExploding] = useState(false);
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: MouseEvent) => {
       setCursorPosition({ x: event.clientX, y: event.clientY });
 
       if (enableTrail) {
-        const newParticle = {
+        const newParticle: Particle = {
           id: Date.now() + Math.random(),
           left: event.clientX,
           top: event.clientY,
         };
+
         setParticles((prevParticles) => [...prevParticles, newParticle]);
 
         setTimeout(() => {
@@ -65,5 +76,3 @@ const Cursor = ({ enableTrail }) => {
     </div>
   );
 };
-
-export default Cursor;
