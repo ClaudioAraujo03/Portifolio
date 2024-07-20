@@ -5,10 +5,9 @@ import { Home } from "./pages/Home";
 import { NavBar } from "./components/NavBar";
 import { Cursor } from "./components/Cursor";
 import Sidebar from "./components/Sidebar";
-import { useTheme } from "./hooks/useTheme";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 export const App: FC = () => {
-  const { theme, toggleTheme } = useTheme();
   const [enableTrail, setEnableTrail] = useState<boolean>(false);
 
   const toggleTrail = () => {
@@ -17,14 +16,17 @@ export const App: FC = () => {
 
   return (
     <div className="App">
-      <Cursor enableTrail={enableTrail} />
-      <Router>
-        <Sidebar />
-        <NavBar toggleTheme={toggleTheme} theme={theme} />
-        <Routes>
-          <Route path="/home" element={<Home theme={theme} />} />
-        </Routes>
-      </Router>
+      <ThemeProvider>
+
+        <Cursor enableTrail={enableTrail} />
+        <Router>
+          <Sidebar />
+          <NavBar />
+          <Routes>
+            <Route path="/home" element={<Home />} />
+          </Routes>
+        </Router>
+      </ThemeProvider>
     </div>
   );
 };

@@ -5,12 +5,14 @@ import imgMeLight from "../assets/images/me_light_pixar.png";
 import { FaFileDownload, FaVideo } from "react-icons/fa";
 import { PiCertificate } from "react-icons/pi";
 import { LuBrainCircuit } from "react-icons/lu";
+import { useTheme } from "../contexts/ThemeContext";
 
 interface HomeProps {
-  theme: "light-mode" | "dark-mode";
 }
 
-export const Home: FC<HomeProps> = ({ theme }) => {
+export const Home: FC<HomeProps> = () => {
+  const { theme, toggleTheme } = useTheme();
+  
   return (
     <div className="home">
       <h1 className="section-txt">HOME</h1>

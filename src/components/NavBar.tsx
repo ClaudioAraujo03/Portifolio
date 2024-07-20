@@ -3,13 +3,15 @@ import "../styles/components/NavBar.css";
 import { MdHome, MdPerson, MdWork, MdContacts } from "react-icons/md";
 import { AiOutlineFileText } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useTheme } from "../contexts/ThemeContext";
 
 interface NavBarProps {
-  toggleTheme: () => void;
-  theme: "light-mode" | "dark-mode";
+
 }
 
-export const NavBar: FC<NavBarProps> = ({ toggleTheme, theme }) => {
+export const NavBar: FC<NavBarProps> = () => {
+  const {theme, toggleTheme} = useTheme();
+
   const [sectionSelected, setSectionSelected] = useState<string>("home");
 
   return (
