@@ -2,20 +2,19 @@ import React, { useState, FC } from "react";
 import "../styles/components/NavBar.css";
 import { MdHome, MdPerson, MdWork, MdContacts } from "react-icons/md";
 import { AiOutlineFileText } from "react-icons/ai";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface NavBarProps {
   toggleTheme: () => void;
-  styleWeb: "light-mode" | "dark-mode";
+  theme: "light-mode" | "dark-mode";
 }
 
-export const NavBar: FC<NavBarProps> = ({ toggleTheme, styleWeb }) => {
+export const NavBar: FC<NavBarProps> = ({ toggleTheme, theme }) => {
   const [sectionSelected, setSectionSelected] = useState<string>("home");
-  const location = useLocation();
 
   return (
     <div>
-      {styleWeb === "dark-mode" ? (
+      {theme === "dark-mode" ? (
         <div onClick={toggleTheme} className="moon">
           <div className="star star1"></div>
           <div className="star star2"></div>
@@ -33,9 +32,8 @@ export const NavBar: FC<NavBarProps> = ({ toggleTheme, styleWeb }) => {
       )}
       <div className="navbar-container">
         <div
-          className={`group-button ${
-            sectionSelected === "home" ? "active" : ""
-          }`}
+          className={`group-button ${sectionSelected === "home" ? "active" : ""
+            }`}
         >
           <Link to="/home" onClick={() => setSectionSelected("home")}>
             <MdHome className="icon" />
@@ -45,9 +43,8 @@ export const NavBar: FC<NavBarProps> = ({ toggleTheme, styleWeb }) => {
           </Link>
         </div>
         <div
-          className={`group-button ${
-            sectionSelected === "sobre" ? "active" : ""
-          }`}
+          className={`group-button ${sectionSelected === "sobre" ? "active" : ""
+            }`}
         >
           <Link to="/sobre" onClick={() => setSectionSelected("sobre")}>
             <MdPerson className="icon" />
@@ -67,9 +64,8 @@ export const NavBar: FC<NavBarProps> = ({ toggleTheme, styleWeb }) => {
           </Link>
         </div>
         <div
-          className={`group-button ${
-            sectionSelected === "projetos" ? "active" : ""
-          }`}
+          className={`group-button ${sectionSelected === "projetos" ? "active" : ""
+            }`}
         >
           <Link to="/projetos" onClick={() => setSectionSelected("projetos")}>
             <MdWork className="icon" />
@@ -79,9 +75,8 @@ export const NavBar: FC<NavBarProps> = ({ toggleTheme, styleWeb }) => {
           </Link>
         </div>
         <div
-          className={`group-button ${
-            sectionSelected === "contato" ? "active" : ""
-          }`}
+          className={`group-button ${sectionSelected === "contato" ? "active" : ""
+            }`}
         >
           <Link to="/contato" onClick={() => setSectionSelected("contato")}>
             <MdContacts className="icon" />

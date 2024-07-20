@@ -7,11 +7,10 @@ import { PiCertificate } from "react-icons/pi";
 import { LuBrainCircuit } from "react-icons/lu";
 
 interface HomeProps {
-  styleWeb: "light-mode" | "dark-mode";
+  theme: "light-mode" | "dark-mode";
 }
 
-export const Home: FC<HomeProps> = ({ styleWeb }) => {
-
+export const Home: FC<HomeProps> = ({ theme }) => {
   return (
     <div className="home">
       <h1 className="section-txt">HOME</h1>
@@ -44,7 +43,7 @@ export const Home: FC<HomeProps> = ({ styleWeb }) => {
       </div>
       <div className="img-home">
         <img
-          src={styleWeb === "dark-mode" ? imgMeDark : imgMeLight}
+          src={theme === "dark-mode" ? imgMeDark : imgMeLight}
           alt="me"
         />
         <div className="info-boxes">
@@ -53,7 +52,6 @@ export const Home: FC<HomeProps> = ({ styleWeb }) => {
               <div className="wave"></div>
               <div className="wave"></div>
               <div className="wave"></div>
-
               <div className="infotop">
                 <LuBrainCircuit />
                 <br />

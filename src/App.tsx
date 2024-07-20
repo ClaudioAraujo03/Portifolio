@@ -1,25 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, FC } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./styles/App.css";
 import { Home } from "./pages/Home";
 import { NavBar } from "./components/NavBar";
 import { Cursor } from "./components/Cursor";
 import Sidebar from "./components/Sidebar";
+import { useTheme } from "./hooks/useTheme";
 
-export const App: React.FC = () => {
-  const [styleWeb, setStyleWeb] = useState<"dark-mode" | "light-mode">("dark-mode");
+export const App: FC = () => {
+  const { theme, toggleTheme } = useTheme();
   const [enableTrail, setEnableTrail] = useState<boolean>(false);
 
   const toggleTrail = () => {
     setEnableTrail(!enableTrail);
-  };
-
-  useEffect(() => {
-    document.body.className = styleWeb;
-  }, [styleWeb]);
-
-  const toggleTheme = () => {
-    setStyleWeb((prevTheme) => (prevTheme === "light-mode" ? "dark-mode" : "light-mode"));
   };
 
   return (
@@ -27,9 +20,9 @@ export const App: React.FC = () => {
       <Cursor enableTrail={enableTrail} />
       <Router>
         <Sidebar />
-        <NavBar toggleTheme={toggleTheme} styleWeb={styleWeb} />
+        <NavBar toggleTheme={toggleTheme} theme={theme} />
         <Routes>
-          <Route path="/home" element={<Home styleWeb={styleWeb} />} />
+          <Route path="/home" element={<Home theme={theme} />} />
         </Routes>
       </Router>
     </div>
