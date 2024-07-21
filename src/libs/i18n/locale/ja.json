@@ -1,0 +1,45 @@
+{
+    "translation": {
+        "navbar": {
+            "home": "ホーム",
+            "about": "約",
+            "CV": "履歴書",
+            "projects": "プロジェクト",
+            "contacts": "連絡先"
+        },
+        "sidebar": {
+            "language": "言語",
+            "social": "ソーシャル"
+        },
+        "language-modal": {
+            "title": "言語を選択",
+            "description": "以下のオプションからお好みの言語を選択してください。",
+            "close": "閉じる",
+            "languages": {
+                "en": "英語",
+                "pt": "ポルトガル語",
+                "es": "スペイン語",
+                "fr": "フランス語",
+                "de": "ドイツ語",
+                "zh": "中国語",
+                "ja": "日本語",
+                "ru": "ロシア語"
+            }
+        },
+        "home": {
+            "sectionTxt": "ホーム",
+            "helloIam": "こんにちは、私は",
+            "job": "フルスタック開発者",
+            "myNameIs": "私の名前は ",
+            "name": "Cláudio Araújo",
+            "downloadCV": "履歴書をダウンロード！",
+            "seeVideo": "ここで私についてのビデオを見る",
+            "hardSkills": "ハードスキル",
+            "hardSkillsDescription": "このセクションでは、役割に必要な主要な技術スキルを強調し、専門知識と能力を示します。",
+            "viewSkills": "スキルを見る",
+            "certifications": "認証",
+            "certificationsDescription": "このセクションでは、プロフェッショナルな成長と業界標準へのコミットメントを反映する主要な認証を紹介します。",
+            "seeCertifications": "認証を見る"
+        }
+    }
+}

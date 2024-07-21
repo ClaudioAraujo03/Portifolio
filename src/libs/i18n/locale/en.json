@@ -1,5 +1,45 @@
 {
     "translation": {
-        "header": ""
+        "navbar": {
+            "home": "Home",
+            "about": "About",
+            "CV": "CV",
+            "projects": "Projects",
+            "contacts": "Contacts"
+        },
+        "sidebar": {
+            "language": "Language",
+            "social": "Social"
+        },
+        "language-modal": {
+            "title": "Select Language",
+            "description": "Please select your preferred language from the options below.",
+            "close": "Close",
+            "languages": {
+                "en": "English",
+                "pt": "Portuguese",
+                "es": "Spanish",
+                "fr": "French",
+                "de": "German",
+                "zh": "Chinese",
+                "ja": "Japanese",
+                "ru": "Russian"
+            }
+        },
+        "home": {
+            "sectionTxt": "HOME",
+            "helloIam": "Hello I`am",
+            "job": "FULLSTACK DEVELOPER",
+            "myNameIs": "My name is ",
+            "name": "Cláudio Araújo",
+            "downloadCV": "DOWNLOAD MY CV !",
+            "seeVideo": "See a video about me here",
+            "hardSkills": "Hard skills",
+            "hardSkillsDescription": "This section highlights essential technical skills required for the role, demonstrating expertise and proficiency.",
+            "viewSkills": "View skills",
+            "certifications": "Certifications",
+            "certificationsDescription": "This section showcases key certifications, reflecting commitment to professional growth and industry standards.",
+            "seeCertifications": "See certifications"
+        }
     }
 }

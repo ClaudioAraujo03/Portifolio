@@ -1,0 +1,45 @@
+{
+    "translation": {
+        "navbar": {
+            "home": "首页",
+            "about": "关于",
+            "CV": "简历",
+            "projects": "项目",
+            "contacts": "联系方式"
+        },
+        "sidebar": {
+            "language": "语言",
+            "social": "社交"
+        },
+        "language-modal": {
+            "title": "选择语言",
+            "description": "请从以下选项中选择您喜欢的语言。",
+            "close": "关闭",
+            "languages": {
+                "en": "英语",
+                "pt": "葡萄牙语",
+                "es": "西班牙语",
+                "fr": "法语",
+                "de": "德语",
+                "zh": "中文",
+                "ja": "日语",
+                "ru": "俄语"
+            }
+        },
+        "home": {
+            "sectionTxt": "首页",
+            "helloIam": "你好，我是",
+            "job": "全栈开发人员",
+            "myNameIs": "我的名字是 ",
+            "name": "Cláudio Araújo",
+            "downloadCV": "下载我的简历！",
+            "seeVideo": "在这里查看关于我的视频",
+            "hardSkills": "硬技能",
+            "hardSkillsDescription": "本节突出了角色所需的关键技术技能，展示了专业知识和能力。",
+            "viewSkills": "查看技能",
+            "certifications": "认证",
+            "certificationsDescription": "本节展示了关键认证，反映了对职业成长和行业标准的承诺。",
+            "seeCertifications": "查看认证"
+        }
+    }
+}

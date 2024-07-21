@@ -1,0 +1,45 @@
+{
+    "translation": {
+        "navbar": {
+            "home": "Startseite",
+            "about": "Über mich",
+            "CV": "Lebenslauf",
+            "projects": "Projekte",
+            "contacts": "Kontakte"
+        },
+        "sidebar": {
+            "language": "Sprache",
+            "social": "Sozial"
+        },
+        "language-modal": {
+            "title": "Sprache wählen",
+            "description": "Bitte wählen Sie Ihre bevorzugte Sprache aus den folgenden Optionen aus.",
+            "close": "Schließen",
+            "languages": {
+                "en": "Englisch",
+                "pt": "Portugiesisch",
+                "es": "Spanisch",
+                "fr": "Französisch",
+                "de": "Deutsch",
+                "zh": "Chinesisch",
+                "ja": "Japanisch",
+                "ru": "Russisch"
+            }
+        },
+        "home": {
+            "sectionTxt": "STARTSEITE",
+            "helloIam": "Hallo, ich bin",
+            "job": "FULLSTACK-ENTWICKLER",
+            "myNameIs": "Mein Name ist ",
+            "name": "Cláudio Araújo",
+            "downloadCV": "LEBENSLAUF HERUNTERLADEN !",
+            "seeVideo": "Hier ein Video über mich ansehen",
+            "hardSkills": "Fachkompetenzen",
+            "hardSkillsDescription": "Dieser Abschnitt hebt die wesentlichen technischen Fähigkeiten hervor, die für die Rolle erforderlich sind, und zeigt Expertise und Kompetenz.",
+            "viewSkills": "Kompetenzen ansehen",
+            "certifications": "Zertifikate",
+            "certificationsDescription": "Dieser Abschnitt zeigt wichtige Zertifikate, die das Engagement für berufliches Wachstum und Branchenstandards widerspiegeln.",
+            "seeCertifications": "Zertifikate ansehen"
+        }
+    }
+}

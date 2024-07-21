@@ -4,14 +4,15 @@ import { MdHome, MdPerson, MdWork, MdContacts } from "react-icons/md";
 import { AiOutlineFileText } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 interface NavBarProps {
 
 }
 
 export const NavBar: FC<NavBarProps> = () => {
-  const {theme, toggleTheme} = useTheme();
-
+  const { theme, toggleTheme } = useTheme();
+  const { t } = useTranslation();
   const [sectionSelected, setSectionSelected] = useState<string>("home");
 
   return (
@@ -40,7 +41,7 @@ export const NavBar: FC<NavBarProps> = () => {
           <Link to="/home" onClick={() => setSectionSelected("home")}>
             <MdHome className="icon" />
             {sectionSelected === "home" && (
-              <h6 className="slide-in-fwd-right">Home</h6>
+              <h6 className="slide-in-fwd-right">{t(`navbar.home`)}</h6>
             )}
           </Link>
         </div>
@@ -51,7 +52,7 @@ export const NavBar: FC<NavBarProps> = () => {
           <Link to="/sobre" onClick={() => setSectionSelected("sobre")}>
             <MdPerson className="icon" />
             {sectionSelected === "sobre" && (
-              <h6 className="slide-in-fwd-right">Sobre</h6>
+              <h6 className="slide-in-fwd-right">{t(`navbar.about`)}</h6>
             )}
           </Link>
         </div>
@@ -61,7 +62,7 @@ export const NavBar: FC<NavBarProps> = () => {
           <Link to="/cv" onClick={() => setSectionSelected("cv")}>
             <AiOutlineFileText className="icon" />
             {sectionSelected === "cv" && (
-              <h6 className="slide-in-fwd-right">CV</h6>
+              <h6 className="slide-in-fwd-right">{t(`navbar.CV`)}</h6>
             )}
           </Link>
         </div>
@@ -72,7 +73,7 @@ export const NavBar: FC<NavBarProps> = () => {
           <Link to="/projetos" onClick={() => setSectionSelected("projetos")}>
             <MdWork className="icon" />
             {sectionSelected === "projetos" && (
-              <h6 className="slide-in-fwd-right">Projetos</h6>
+              <h6 className="slide-in-fwd-right">{t(`navbar.projects`)}</h6>
             )}
           </Link>
         </div>
@@ -83,7 +84,7 @@ export const NavBar: FC<NavBarProps> = () => {
           <Link to="/contato" onClick={() => setSectionSelected("contato")}>
             <MdContacts className="icon" />
             {sectionSelected === "contato" && (
-              <h6 className="slide-in-fwd-right">Contatos</h6>
+              <h6 className="slide-in-fwd-right">{t(`navbar.contacts`)}</h6>
             )}
           </Link>
         </div>

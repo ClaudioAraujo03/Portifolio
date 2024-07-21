@@ -6,37 +6,42 @@ import { FaFileDownload, FaVideo } from "react-icons/fa";
 import { PiCertificate } from "react-icons/pi";
 import { LuBrainCircuit } from "react-icons/lu";
 import { useTheme } from "../contexts/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 interface HomeProps {
 }
 
 export const Home: FC<HomeProps> = () => {
   const { theme, toggleTheme } = useTheme();
-  
+  const { t } = useTranslation();
+
   return (
     <div className="home">
-      <h1 className="section-txt">HOME</h1>
+      <h1 className="section-txt">{t(`home.sectionTxt`)}</h1>
 
       <div className="info-home">
         <h1>01</h1>
         <div className="txt-infos">
-          <span className="my-name">Hello I`am</span>
-          <span className="job">FULLSTACK DEVELOPER</span>
+          <span className="my-name">{t(`home.helloIam`)}</span>
+          <span className="job">{t(`home.job`)}</span>
           <span className="name">
-            My name is <b>Cláudio Araújo</b>
+            {t(`home.myNameIs`)} 
+            <b>
+              {t(`home.name`)}
+            </b>
           </span>
           <div className="btn-actions-home">
             <button>
               <a href="#" className="btn2">
                 <span className="spn2">
-                  DOWNLOAD MY CV ! <FaFileDownload />
+                  {t(`home.downloadCV`)} <FaFileDownload />
                 </span>
               </a>
             </button>
             <button>
               <a href="#" className="btn2">
                 <span className="spn2">
-                  See a video about me here <FaVideo />
+                  {t(`home.seeVideo`)} <FaVideo />
                 </span>
               </a>
             </button>
@@ -57,13 +62,12 @@ export const Home: FC<HomeProps> = () => {
               <div className="infotop">
                 <LuBrainCircuit />
                 <br />
-                <span>Hard skills</span>
+                <span>{t(`home.hardSkills`)}</span>
                 <br />
                 <p>
-                  This section highlights essential technical skills required
-                  for the role, demonstrating expertise and proficiency.
+                  {t(`home.hardSkillsDescription`)}
                 </p>
-                <button className="animated-button btn-style-1">View skills</button>
+                <button className="animated-button btn-style-1">{t(`home.viewSkills`)}</button>
               </div>
             </div>
           </div>
@@ -72,13 +76,12 @@ export const Home: FC<HomeProps> = () => {
               <div className="infotop">
                 <PiCertificate />
                 <br />
-                <span>Certifications</span>
+                <span>{t(`home.certifications`)}</span>
                 <br />
                 <p>
-                  This section showcases key certifications, reflecting
-                  commitment to professional growth and industry standards.
+                  {t(`home.certificationsDescription`)}
                 </p>
-                <button className="animated-button btn-style-2">See certifications</button>
+                <button className="animated-button btn-style-2">{t(`home.seeCertifications`)}</button>
               </div>
             </div>
           </div>

@@ -1,0 +1,45 @@
+{
+    "translation": {
+        "navbar": {
+            "home": "Inicio",
+            "about": "Acerca de",
+            "CV": "CV",
+            "projects": "Proyectos",
+            "contacts": "Contactos"
+        },
+        "sidebar": {
+            "language": "Idioma",
+            "social": "Social"
+        },
+        "language-modal": {
+            "title": "Seleccionar Idioma",
+            "description": "Por favor, seleccione su idioma preferido de las opciones a continuación.",
+            "close": "Cerrar",
+            "languages": {
+                "en": "Inglés",
+                "pt": "Portugués",
+                "es": "Español",
+                "fr": "Francés",
+                "de": "Alemán",
+                "zh": "Chino",
+                "ja": "Japonés",
+                "ru": "Ruso"
+            }
+        },
+        "home": {
+            "sectionTxt": "INICIO",
+            "helloIam": "Hola, soy",
+            "job": "DESARROLLADOR FULLSTACK",
+            "myNameIs": "Mi nombre es ",
+            "name": "Cláudio Araújo",
+            "downloadCV": "¡DESCARGAR MI CV!",
+            "seeVideo": "Ver un video sobre mí aquí",
+            "hardSkills": "Habilidades Técnicas",
+            "hardSkillsDescription": "Esta sección destaca las habilidades técnicas esenciales para el rol, demostrando experiencia y competencia.",
+            "viewSkills": "Ver habilidades",
+            "certifications": "Certificaciones",
+            "certificationsDescription": "Esta sección muestra las certificaciones clave, reflejando el compromiso con el crecimiento profesional y los estándares de la industria.",
+            "seeCertifications": "Ver certificaciones"
+        }
+    }
+}

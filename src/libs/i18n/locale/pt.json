@@ -1,3 +1,45 @@
 {
-    
+    "translation": {
+        "navbar": {
+            "home": "Início",
+            "about": "Sobre",
+            "CV": "CV",
+            "projects": "Projetos",
+            "contacts": "Contatos"
+        },
+        "sidebar": {
+            "language": "Idioma",
+            "social": "Social"
+        },
+        "language-modal": {
+            "title": "Selecionar Idioma",
+            "description": "Por favor, selecione o seu idioma preferido a partir das opções abaixo.",
+            "close": "Fechar",
+            "languages": {
+                "en": "Inglês",
+                "pt": "Português",
+                "es": "Espanhol",
+                "fr": "Francês",
+                "de": "Alemão",
+                "zh": "Chinês",
+                "ja": "Japonês",
+                "ru": "Russo"
+            }
+        },
+        "home": {
+            "sectionTxt": "INÍCIO",
+            "helloIam": "Olá, eu sou",
+            "job": "DESENVOLVEDOR FULLSTACK",
+            "myNameIs": "Meu nome é ",
+            "name": "Cláudio Araújo",
+            "downloadCV": "BAIXAR MEU CV !",
+            "seeVideo": "Veja um vídeo sobre mim aqui",
+            "hardSkills": "Habilidades Técnicas",
+            "hardSkillsDescription": "Esta seção destaca as habilidades técnicas essenciais para o cargo, demonstrando expertise e proficiência.",
+            "viewSkills": "Ver habilidades",
+            "certifications": "Certificações",
+            "certificationsDescription": "Esta seção apresenta certificações-chave, refletindo compromisso com o crescimento profissional e padrões da indústria.",
+            "seeCertifications": "Ver certificações"
+        }
+    }
 }

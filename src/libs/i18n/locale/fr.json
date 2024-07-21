@@ -1,0 +1,45 @@
+{
+    "translation": {
+        "navbar": {
+            "home": "Accueil",
+            "about": "À propos",
+            "CV": "CV",
+            "projects": "Projets",
+            "contacts": "Contacts"
+        },
+        "sidebar": {
+            "language": "Langue",
+            "social": "Social"
+        },
+        "language-modal": {
+            "title": "Sélectionner la langue",
+            "description": "Veuillez sélectionner votre langue préférée parmi les options ci-dessous.",
+            "close": "Fermer",
+            "languages": {
+                "en": "Anglais",
+                "pt": "Portugais",
+                "es": "Espagnol",
+                "fr": "Français",
+                "de": "Allemand",
+                "zh": "Chinois",
+                "ja": "Japonais",
+                "ru": "Russe"
+            }
+        },
+        "home": {
+            "sectionTxt": "ACCUEIL",
+            "helloIam": "Bonjour, je suis",
+            "job": "DÉVELOPPEUR FULLSTACK",
+            "myNameIs": "Mon nom est ",
+            "name": "Cláudio Araújo",
+            "downloadCV": "TÉLÉCHARGER MON CV !",
+            "seeVideo": "Voir une vidéo sur moi ici",
+            "hardSkills": "Compétences Techniques",
+            "hardSkillsDescription": "Cette section met en avant les compétences techniques essentielles pour le rôle, démontrant expertise et compétence.",
+            "viewSkills": "Voir les compétences",
+            "certifications": "Certifications",
+            "certificationsDescription": "Cette section présente les certifications clés, reflétant l'engagement envers la croissance professionnelle et les normes de l'industrie.",
+            "seeCertifications": "Voir les certifications"
+        }
+    }
+}
