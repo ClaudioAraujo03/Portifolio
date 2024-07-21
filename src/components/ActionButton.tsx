@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFileDownload, FaVideo } from 'react-icons/fa';
+import "../styles/components/ActionButton.css"
 
 interface ActionButtonProps {
   href: string;

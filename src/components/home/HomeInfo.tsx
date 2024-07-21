@@ -2,6 +2,7 @@ import React from 'react';
 import { ActionButton } from '../ActionButton';
 import { FaFileDownload, FaVideo } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import "../../styles/components/home/HomeInfo.css"
 
 export const HomeInfo: React.FC = () => {
   const { t } = useTranslation();

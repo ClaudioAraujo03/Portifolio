@@ -1,4 +1,3 @@
-// pages/Home.tsx
 import React, { FC } from 'react';
 import '../styles/pages/Home.css';
 import imgMeDark from '../assets/images/me_dark_up.png';
